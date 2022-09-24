@@ -2,9 +2,9 @@ import position
 
 class Unit:
     
-    def __init__(self, ID, type, points, POS):
+    def __init__(self, ID, name, points, POS = 0):
         self.setID(ID)
-        self.setType(type)
+        self.setName(name)
         self.setPoints(points)
         self.setPOS(POS)
         
@@ -12,8 +12,8 @@ class Unit:
     def setID(self, ID):
         self.ID = ID
         
-    def setType(self, type):
-        self.type = type
+    def setName(self, name):
+        self.name = name
         
     def setPoints(self, points):
         self.points = points
@@ -25,8 +25,8 @@ class Unit:
     def getID(self):
         return self.ID
     
-    def getType(self):
-        return self.type
+    def getName(self):
+        return self.name
     
     def getPoints(self):
         return self.points
