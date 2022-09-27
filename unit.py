@@ -1,6 +1,6 @@
-import position
+from abc import ABC, abstractmethod
 
-class Unit:
+class Unit(ABC):
     
     def __init__(self, ID, name, points, POS = 0):
         self.setID(ID)
@@ -21,6 +21,10 @@ class Unit:
     def setPOS(self, POS):
         self.POS = POS
         
+    @abstractmethod
+    def move(self, grid, POS):
+        pass 
+     
     #Getter Methods
     def getID(self):
         return self.ID
